@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -  uses: dart-lang/setup-dart@v2.8
+      -  uses: cedx/setup-dart@v3.0.0
 
 
       # Note: This workflow uses the latest stable version of the Dart SDK.

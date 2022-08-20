@@ -16,11 +16,14 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-  
-      - name: Config cache
-      - run: export PUB_CACHE=C:/src/flutter/.pub-cache/bin
-      - run: export PATH=$PATH:$PUB_CACHE
+    
       - uses: cedx/setup-dart@v3.0.0
+      
+      - name: Config cache
+        run: export PUB_CACHE=C:/src/flutter/.pub-cache/bin
+        
+      - name: Config cache 2 
+        run: export PATH=$PATH:$PUB_CACHE
 
 
       # Note: This workflow uses the latest stable version of the Dart SDK.
@@ -30,7 +33,7 @@ jobs:
       - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
 
       - name: Install dependencies
-        run: flutter pub get
+        run: dart pub get
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       - name: Verify formatting

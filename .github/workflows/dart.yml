@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -  name: Setup Dart SDK
       -  uses: dart-lang/setup-dart@v2.8
 
 

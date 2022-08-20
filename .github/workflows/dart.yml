@@ -14,9 +14,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+  
     steps:
-      -  uses: cedx/setup-dart@v3.0.0
+  
+      - name: Config cache
+      - run: export PUB_CACHE=C:/src/flutter/.pub-cache/bin
+      - run: export PATH=$PATH:$PUB_CACHE
+      - uses: cedx/setup-dart@v3.0.0
 
 
       # Note: This workflow uses the latest stable version of the Dart SDK.

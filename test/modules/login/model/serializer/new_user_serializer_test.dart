@@ -5,27 +5,24 @@ void main() {
   group(" New user Serializer ", () {
     test("Should make from a JSON", () {
       final newUser = NewUserSerializer().fake();
-      final json ={
+      final json = {
         'nickname': newUser.nickname,
         'email': newUser.email,
         'password': newUser.password,
       };
 
       expect(NewUserSerializer().from(json), newUser);
-
     });
 
     test("Should make a Json from NewUser", () {
       final newUser = NewUserSerializer().fake();
-      final json ={
+      final json = {
         'nickname': newUser.nickname,
         'email': newUser.email,
         'password': newUser.password,
       };
 
       expect(NewUserSerializer().to(newUser), json);
-
     });
-
   });
 }

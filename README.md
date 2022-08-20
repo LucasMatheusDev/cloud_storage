@@ -9,12 +9,15 @@ See the documentation here: [Documentation](https://lucasmatheusdev.github.io/)
 
 ### This project use MVVM architecture.
     
-     MODEL
-     - Model is the class that represents the state of the project.
-     VIEW
-     - View is the class that represents the UI.
-     VIEWMODEL
-     - ViewModel is the class that links the View and the Model.
+    Model: 
+    - The model layer is the business logic that drives the application;
+    View: 
+    - is the UI.
+    ViewModel:
+    - The ViewModel layers coordinate operations between the view and model layers,
+      in addition, it will invoke operations on the Model layer when necessary.
+      
+ for more informatio, click [here](https://coodesh.com/blog/dicionario/o-que-e-arquitetura-mvvm/#:~:text=O%20MVVM%20%C3%A9%20um%20padr%C3%A3o,%C3%A9%20a%20interface%20do%20usu%C3%A1rio.)
 
 ### Dependencies 
 

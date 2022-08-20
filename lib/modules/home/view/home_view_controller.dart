@@ -76,8 +76,8 @@ class HomeViewController extends GetxController with StateMixin<List<String>?> {
         status: images!.isEmpty ? RxStatus.empty() : RxStatus.success(),
       );
     }
-
   }
+
   Future<void> logout() async {
     await _homeViewModel.logout();
   }

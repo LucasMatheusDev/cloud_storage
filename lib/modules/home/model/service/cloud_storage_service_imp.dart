@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:cloud_storage/core/interface/service/cloud_storage_service.dart';
-import 'package:faker/faker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 

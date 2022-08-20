@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '192815988000',
     projectId: 'my-cloud-storage-safe',
     storageBucket: 'my-cloud-storage-safe.appspot.com',
-    iosClientId: '192815988000-l87l17a5m4atc95m0o151eas6asm9icq.apps.googleusercontent.com',
+    iosClientId:
+        '192815988000-l87l17a5m4atc95m0o151eas6asm9icq.apps.googleusercontent.com',
     iosBundleId: 'com.example.cloudStorage',
   );
 }

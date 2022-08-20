@@ -54,6 +54,4 @@ class CustomNavigator {
         id: id,
         parameters: parameters,
       );
-
-
 }

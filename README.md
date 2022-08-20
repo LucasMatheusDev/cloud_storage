@@ -1,16 +1,21 @@
 # cloud_storage
 
-A new Flutter project.
 
-## Getting Started
+A simple project for storing images in the cloud.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+See the documentation here: [Documentation](https://lucasmatheusdev.github.io/)
+## Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### This project use MVVM architecture.
+    
+     MODEL
+     - Model is the class that represents the state of the project.
+     VIEW
+     - View is the class that represents the UI.
+     VIEWMODEL
+     - ViewModel is the class that links the View and the Model.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Dependencies 
+
+Dependent on a plugin to get the native device images, which can be found [here](https://github.com/LucasMatheusDev/gallery_plugin)

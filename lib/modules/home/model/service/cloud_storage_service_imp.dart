@@ -43,11 +43,4 @@ class CloudStorageServiceImp implements ICloudStorageService {
     final ref = storage.refFromURL(urlImage);
     await ref.delete();
   }
-
-  Future<List<String>> FAKEIMAGES() async {
-    return Future.value(List.generate(
-      10,
-      (index) => faker.image.image(),
-    ));
-  }
 }

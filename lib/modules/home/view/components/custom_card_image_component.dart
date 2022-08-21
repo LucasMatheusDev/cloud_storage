@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardGalleryImageComponent extends StatelessWidget {
@@ -30,25 +31,25 @@ class CustomCardGalleryImageComponent extends StatelessWidget {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
-            child: Image.network(
-              urlImage,
+            child: CachedNetworkImage(
+              key: Key(urlImage),
+              fadeInCurve: Curves.easeIn,
+              imageUrl: urlImage,
               height: screenSize.height,
               width: screenSize.width,
               fit: BoxFit.cover,
-              errorBuilder: (_, __, ___) => const Center(
+              errorWidget: (_, __, ___) => const Center(
                 child: Icon(
                   Icons.error,
                   color: Colors.red,
                 ),
               ),
-              loadingBuilder: (_, child, loadingProgress) {
-                if (loadingProgress == null) return child;
-                return Center(
-                  child: CircularProgressIndicator(
-                    value: loadingProgress.expectedTotalBytes != null
-                        ? loadingProgress.cumulativeBytesLoaded /
-                            loadingProgress.expectedTotalBytes!
-                        : null,
+              progressIndicatorBuilder: (context, url, downloadProgress) {
+                return RepaintBoundary(
+                  child: Center(
+                    child: CircularProgressIndicator(
+                      value: downloadProgress.progress,
+                    ),
                   ),
                 );
               },

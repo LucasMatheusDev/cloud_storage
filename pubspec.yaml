@@ -53,6 +53,7 @@ dependencies:
     git: 
       url: https://github.com/LucasMatheusDev/gallery_plugin.git
       ref: master
+  cached_network_image: ^3.2.1
   
 
 dev_dependencies:

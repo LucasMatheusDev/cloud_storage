@@ -3,10 +3,13 @@ import 'package:cloud_storage/core/config/analytics_error.dart';
 import 'package:cloud_storage/core/routes/routes_config.dart';
 import 'package:cloud_storage/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 Future<void> main() async {
   await AnalyticsError().zoneGuarded(() async {
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     runApp(const MyApp());
   });
 }

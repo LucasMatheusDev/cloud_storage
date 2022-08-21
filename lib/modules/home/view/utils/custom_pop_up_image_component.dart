@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 Future showPopUpImage({
@@ -34,9 +35,27 @@ Future showPopUpImage({
                 child: Hero(
                   tag: tag,
                   child: InteractiveViewer(
-                    child: Image.network(
-                      urlImage,
+                    minScale: 0.1,
+                    child: CachedNetworkImage(
+                      imageUrl: urlImage,
+                      fadeInCurve: Curves.easeIn,
                       fit: BoxFit.cover,
+                      errorWidget: (_, __, ___) => const Center(
+                        child: Icon(
+                          Icons.error,
+                          color: Colors.red,
+                        ),
+                      ),
+                      progressIndicatorBuilder:
+                          (context, url, downloadProgress) {
+                        return RepaintBoundary(
+                          child: Center(
+                            child: CircularProgressIndicator(
+                              value: downloadProgress.progress,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
